@@ -49,6 +49,8 @@ Dan juga dengan sedkit merubah bentuk dari value `ID_Pesanan` agar lebih kompreh
 
 Sekarang tabel tersebut telah memenuhi syarat untuk **Normalisasi 1NF**
 
+<div style="page-break-after: always;"></div>
+
 ### Normalisasi 2NF
 
 Untuk melakukan **Normalisasi 2NF** harus menghilangkan *ketergantungan persial* yang ada pada tabel tersebut.
@@ -95,6 +97,9 @@ Sehingga disini perlu untuk melakukan pemisahan dan membuat relasi untuk menghub
 
 Dengan melakukan perubah struktural tabel menjadi seperti diatas maka proses **Normalisasi 2NF** telah berhasil terpenuhi, yaitu dengan menghilangkan *ketergantungan parsial*.
 
+<div style="page-break-after: always;"></div>
+
+
 ### Normalisasi 3NF
 
 Proses **Normalisasi 3NF** dilakukan untuk menghilangkan *ketergantungan transitif*.
@@ -138,6 +143,8 @@ Karena hal tersebut harus dilakukan perubah struktural tabel agar memenuhi syart
 | PL005        | Suci Aprillia  | Jl. Gebang Putih      |
 
 Perubahan struktural tabel ini sudah memenuhi syarat untuk **Normalisasi 3NF**.
+
+<div style="page-break-after: always;"></div>
 
 ## Entity Relationship Diagram
 
