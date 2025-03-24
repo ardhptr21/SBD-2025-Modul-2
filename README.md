@@ -9,6 +9,8 @@ NRP : 5027241022
 
 Kelas : C
 
+Asisten: NOPS
+
 ## Tahap Normalisasi
 
 > - [+] : Tabel yang ditambahkan atau tabel baru
@@ -127,7 +129,7 @@ Karena hal tersebut harus dilakukan perubah struktural tabel agar memenuhi syart
 
 #### [+] Tabel `Pelanggan`
 
-| ID_Pelanggan | Nama_Pelanggan | Alamat_Pelanggan      |
+| ID_Pelanggan | Nama           | Alamat                |
 | ------------ | -------------- | --------------------- |
 | PL001        | Agus Sustisna  | Jl. Medokan semampir  |
 | PL002        | Udin Pangalila | Sukolilo Park Regency |
@@ -138,3 +140,44 @@ Karena hal tersebut harus dilakukan perubah struktural tabel agar memenuhi syart
 Perubahan struktural tabel ini sudah memenuhi syarat untuk **Normalisasi 3NF**.
 
 ## Entity Relationship Diagram
+
+Berikut adalah ERD dari hasil akhir proses normalisasi yaitu **Normalisasi 3NF**
+
+```mermaid
+erDiagram 
+  Karyawan {
+      string ID_Karyawan PK
+      string Nama
+      string Posisi
+  }
+
+  Pelanggan {
+    string ID_Pelanggan PK
+    string Nama
+    string Alamat
+  }
+
+  Pesanan {
+    string ID_Pesanan PK
+    string ID_Pelanggan FK
+    string ID_Karyawan FK
+    string Tanggal_Pesanan
+    string Metode_Pembayaran
+  }
+
+  Item {
+    string ID_Item PK
+    string Nama
+    string Harga
+  }
+
+  Pesanan_Item {
+    string ID_Pesanan FK
+    string ID_Item FK
+  }
+
+  Pesanan ||--|{ Pesanan_Item : ""
+  Item ||--o{ Pesanan_Item : ""
+  Karyawan ||--o{ Pesanan : ""
+  Pelanggan ||--o{ Pesanan : ""
+```
